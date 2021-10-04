@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        GestureView view = findViewById(R.id.view);
+      //  PaintView view = findViewById(R.id.view);
+    //    view.invalidate();
        // view.setOnTouchListener(this);
     }
 }
