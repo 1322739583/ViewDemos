@@ -4,13 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF3D00"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <com.xzh.viewdemos.ColorView
-        android:id="@+id/view"
+    <com.xzh.viewdemos.PaintView2
+        android:id="@+id/photoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFEB3B"/>
+         />
+    <com.xzh.viewdemos.ColorView
+        android:id="@+id/colorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+     />
+    <Button
+        android:id="@+id/showColorPartten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showColorPartten"
+        android:text="显示取色器"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/saveBitmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存图片"
+        android:onClick="saveBitmap"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/showColorPartten"/>
+
+    <Button
+        android:id="@+id/clearBitmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清空图片"
+        android:onClick="clearBitmap"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/saveBitmap"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.xzh.viewdemos;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -21,6 +22,8 @@ public class PaintView extends View {
     private float nextY;
     private float startX;
     private float startY;
+    private Bitmap bitmap;
+    private Canvas canvas;
 
     public PaintView(Context context) {
         super(context);
@@ -38,14 +41,21 @@ public class PaintView extends View {
         paint.setStrokeWidth(10);
         //不能设为FILL。会出现奇怪的现象
         paint.setStyle(Paint.Style.STROKE);
-        paint.setColor(Color.WHITE);
+        paint.setColor(Color.YELLOW);
         path = new Path();
+
+        int screenWidth = ScreenUtil.getScreenWidth(getContext());
+        int screenHeight = ScreenUtil.getScreenHeight(getContext());
+        bitmap = Bitmap.createBitmap(screenWidth, screenHeight, Bitmap.Config.ARGB_8888);
+        canvas = new Canvas(bitmap);
+
 
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawPath(path,paint);
+      //  canvas.drawPath(path,paint);
+        this.canvas.drawPath(path,paint);
     }
 
     @Override
