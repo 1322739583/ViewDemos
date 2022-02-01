@@ -31,8 +31,6 @@ public class PaintView2 extends View {
     private Bitmap bitmap;
     private Canvas cacheCanvas;
 
-    Handler mHandler;
-    private File mAppRootDir;
 
     public PaintView2(Context context) {
         super(context);
@@ -42,6 +40,16 @@ public class PaintView2 extends View {
     public PaintView2(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView(context, attrs);
+    }
+
+    @Override
+    public boolean performClick() {
+        return super.performClick();
+    }
+
+    @Override
+    public boolean performContextClick() {
+        return super.performContextClick();
     }
 
     private void initView(Context context, AttributeSet attrs) {

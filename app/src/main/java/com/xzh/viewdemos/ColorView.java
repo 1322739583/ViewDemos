@@ -93,10 +93,6 @@ public class ColorView extends View {
         }
         //这个变量可以当作判断是否是第一次启动的变量来用，因为只有第一次值为true
         if (hasWindowFocus) {
-//            mPaint.setStyle(Paint.Style.STROKE);
-//            mPaint.setColor(Color.BLACK);
-//            cacheCanvas.drawOval(colorRects.get(0), mPaint);
-            //invalidate();
             curPosition=0;
             lastPosition=curPosition;
         }
@@ -239,4 +235,6 @@ public class ColorView extends View {
             cacheCanvas.drawOval(colorRects.get(0), mPaint);
         }
     }
+
+
 }
